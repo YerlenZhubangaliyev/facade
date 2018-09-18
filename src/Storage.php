@@ -1,6 +1,6 @@
 <?php
 
-use GuzzleClient;
+use StorageClient;
 
 /**
  * Object storage
@@ -9,7 +9,7 @@ class Storage
 {
 
     /**
-     * @var \GuzzleClient
+     * @var \StorageClient
      */
     private $storageClient;
 
@@ -18,7 +18,7 @@ class Storage
      */
     public function __construct()
     {
-        $this->storageClient = new GuzzleClient();
+        $this->storageClient = new StorageClient();
     }
 
     /**
@@ -28,7 +28,9 @@ class Storage
      */
     public function upload(string $file): bool
     {
-        return $this->storageClient->upload($file);
+        $this->storageClient->upload($file);
+
+        return true;
     }
 
     /**
@@ -36,6 +38,6 @@ class Storage
      */
     public function url(): string
     {
-
+        return $this->storageClient->getFilePath();
     }
 }
