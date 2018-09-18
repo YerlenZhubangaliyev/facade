@@ -24,16 +24,6 @@ class StorageClient
     }
 
     /**
-     * @param string $file
-     *
-     * @return string
-     */
-    public function download(string $file): string
-    {
-        return (string)'';
-    }
-
-    /**
      * @return string
      */
     public function getFilePath(): string
