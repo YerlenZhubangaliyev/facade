@@ -5,7 +5,8 @@
 
 $mediaFile = new Facade();
 
-$mediaFile->upload('/path/to/file');
-
-echo $mediaFile->getUrl();
+echo $mediaFile
+        ->upload('/path/to/file')
+        ->getUrl()
+;
 ```

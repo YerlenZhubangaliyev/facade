@@ -51,9 +51,9 @@ final class Facade
     /**
      * @param string $file
      *
-     * @return void
+     * @return \Facade
      */
-    public function upload(string $file): void
+    public function upload(string $file): Facade
     {
         if (true === $this->file->isAllowed($file)) {
             /** @var MediaInterface $fileTypeInstance */
@@ -64,6 +64,8 @@ final class Facade
 
             $this->uploadedFile = $this->storage->upload($file);
         }
+
+        return $this;
     }
 
     /**
