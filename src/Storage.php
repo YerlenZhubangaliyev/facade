@@ -1,7 +1,5 @@
 <?php
 
-use StorageClient;
-
 /**
  * Object storage
  */
