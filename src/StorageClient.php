@@ -6,6 +6,8 @@
 class StorageClient
 {
 
+    const BASE_DOMAIN = 'cdn.dogovor24.kz';
+
     /**
      * @var string
      */
@@ -36,6 +38,10 @@ class StorageClient
      */
     public function getFilePath(): string
     {
-        return $this->file;
+        return sprintf(
+            "https://%s/%s",
+            self::BASE_DOMAIN,
+            $this->file
+        );
     }
 }
