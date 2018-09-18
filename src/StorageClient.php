@@ -14,11 +14,21 @@ class StorageClient
     /**
      * @param string $file
      *
-     * @return bool
+     * @return void
      */
-    public function upload(string $file): bool
+    public function upload(string $file): void
     {
         $this->file = $file;
+    }
+
+    /**
+     * @param string $file
+     *
+     * @return string
+     */
+    public function download(string $file): string
+    {
+        return (string)'';
     }
 
     /**
