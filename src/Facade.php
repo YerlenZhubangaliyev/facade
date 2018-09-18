@@ -60,7 +60,6 @@ final class Facade
             $fileType         = $this->file->getType($file);
             $fileTypeInstance = $this->{$fileType};
 
-            /** @var MediaInterface $this ->$fileType */
             $fileTypeInstance->processing($file);
 
             $this->uploadedFile = $this->storage->upload($file);
